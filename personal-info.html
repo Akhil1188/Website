@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: -20px; /* Move the main section upwards */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 40px); /* Calculate viewport height minus header padding */
+            flex-direction: column;
+        }
+
+        /* Style for the content section */
+        .content {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px; /* Limit content width for readability */
+        }
+
+        /* Style for headings */
+        h1, h2 {
+            color: #333;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        /* Style for paragraphs */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Style for links */
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for lists */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Style for the mobile menu icon */
+        .mobile-menu-icon {
+            display: block;
+            font-size: 24px;
+            margin-left: 85%; /* Adjusted to margin-left */
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Style the mobile dropdown menu */
+        .mobile-menu {
+            display: none;
+            background-color: #333;
+            text-align: center;
+            list-style-type: none;
+            padding-left: 0; /* Adjusted to remove left padding */
+        }
+
+        .mobile-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: block; /* Adjusted to display items as blocks */
+            padding: 10px; /* Adjusted to add spacing between items */
+        }
+        @media (max-width: 768px) {
+            .desk-menu{
+            display: none;
+            }
+            main{
+                margin:20px;
+            }
+        }
+        @media (min-width: 768px) {
+            .mobile-menu-icon{
+            display: none;
+            }
+
+            .mobile-menu{
+            display: none;
+            }
+            
+        }
+
+        /* Rest of your styles */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="desk-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-info.html">Personal Info</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+        
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">&#9776;</div>
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-info.html">Personal Info</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Personal Info</h1>
+            <h2>Introduction</h2>
+            <p>
+                Hi, I'm Sasidhar Pinjala, a passionate software developer from India. 
+                I specialize in web development and have a strong background in languages 
+                like Python, Java, and JavaScript.
+            </p>
+
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Email: <a href="mailto:sasidharpinjala@gmail.com">sasidharpinjala@gmail.com</a></li>
+                <li>Phone: +91798983186</li>
+                <li>
+                    LinkedIn: 
+                    <a href="https://www.linkedin.com/in/pinjala-sasidhar-b09342217/" target="_blank">
+                        LinkedIn Profile
+                    </a>
+                </li>
+            </ul>
+
+            <h2>Skills and Expertise</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>GitHub</li>
+                <li>C++</li>
+            </ul>
+
+            <h2>Hobbies and Interests</h2>
+            <p>
+                In my free time, I enjoy coding, reading tech blogs, and playing guitar.
+            </p>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    <script>
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.style.display === "block") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

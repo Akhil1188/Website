@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Style for the list of languages */
+        .languages-list {
+            list-style-type: disc; /* Use disc bullets */
+        }
+
+        /* Desktop version styles */
+        @media (min-width: 769px) {
+            header {
+                text-align: center;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            main {
+                margin-top: -20px; /* Move the main section upwards */
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            .main-content {
+                padding-top: 80px;
+                padding-left: 80px;
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+
+            .main-content ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .main-content ul li {
+                margin: 0;
+                padding: 0;
+            }
+
+            .gif-container {
+                padding-top: 80px;
+                width: 50%;
+                float: right;
+            }
+            .mobile-menu-icon{
+                display: none;
+            }
+            .mobile-menu{
+                display: none;
+            }
+
+        }
+
+        /* Mobile version styles */
+        @media (max-width: 768px) {
+            header {
+                text-align: left;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            /* Style the mobile dropdown menu */
+            .mobile-menu {
+                display: none;
+                background-color: #333;
+                padding: 20px 0;
+                text-align: center;
+                list-style-type: none;
+            }
+
+            .mobile-menu li {
+                margin-bottom: 15px;
+            }
+
+            .mobile-menu a {
+                text-decoration: none;
+                color: #fff; /* Change this to your desired text color */
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .mobile-menu-icon {
+                
+                display: block;
+                font-size: 24px;
+                margin-left: 85%; /* Changed to margin-left */
+                padding: 10px;
+                cursor: pointer;
+                
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .gif-container {
+                flex: 1;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f0f0f0;
+            }
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+
+            .main-content {
+                margin-top: 0px;
+                width: 100%;
+                float: right;
+                text-align: center;
+            }
+
+            .main-content ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .main-content ul li {
+                margin: 0;
+                padding: 10px;
+            }
+            .desk-menu{
+                display: none;
+            }
+            .mobile-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: block; /* Adjusted to display items as blocks */
+            padding: 10px; /* Adjusted to add spacing between items */
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="desk-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-info.html">Personal Info</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+        
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">&#9776;</div>
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-info.html">Personal Info</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+    
+    <main>
+        <div class="gif-container">
+            <img src="https://www.lambdatest.com/resources/images/ezgif.com-gif-maker-16.gif" alt="Coding" style="max-height: 100%; max-width: 100%;">
+        </div>
+        <div class="main-content">
+            <h1 style="font-size: 32px; margin-bottom: 10px;">Hi 👋, I'm Sasidhar Pinjala</h1>
+            <p style="font-size: 18px; margin-bottom: 20px;">A passionate software developer from India</p>
+            <p style="font-size: 18px; margin-bottom: 20px;">📫 How to reach me: <a href="https://www.linkedin.com/in/pinjala-sasidhar-b09342217/" target="_blank" style="color: #0077b5; text-decoration: none;">LinkedIn</a></p>
+            <p style="font-size: 18px;">My Resume: <a href="https://drive.google.com/drive/folders/1ZykpLwnYT11tVtLWHX7A6n7ySGsFrAw9?usp=drive_link" target="_blank" style="color: #0077b5; text-decoration: none;">Link</a></p>
+            <h2 style="font-size: 24px; margin-top: 20px;">Languages and Tools</h2>
+            <ul class="languages-list">
+                <li style="font-size: 18px; margin-bottom: 10px;">Python</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">Java</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">Bootstrap</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">JavaScript</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">PHP</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">MySQL</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">GitHub</li>
+                <li style="font-size: 18px; margin-bottom: 10px;">C++</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.style.display === "block") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

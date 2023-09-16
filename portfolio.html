@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: -20px; /* Move the main section upwards */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 40px); /* Calculate viewport height minus header padding */
+            flex-direction: column;
+        }
+
+        /* Style for the content section */
+        .content {
+            
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px; /* Limit content width for readability */
+        }
+
+        /* Style for headings */
+        h1, h2 {
+            color: #333;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        /* Style for paragraphs */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Style for links */
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for lists */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Style for the mobile menu icon */
+        .mobile-menu-icon {
+            display: block;
+            font-size: 24px;
+            margin-left: 85%; /* Adjusted to margin-left */
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Style the mobile dropdown menu */
+        .mobile-menu {
+            display: none;
+            background-color: #333;
+            text-align: center;
+            list-style-type: none;
+            padding-left: 0; /* Adjusted to remove left padding */
+        }
+
+        .mobile-menu li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: block; /* Adjusted to display items as blocks */
+            padding: 10px; /* Adjusted to add spacing between items */
+        }
+        @media (max-width: 768px) {
+            .desk-menu{
+            display: none;
+            }
+            main{
+                margin:20px;
+            }
+        }
+        @media (min-width: 768px) {
+            .mobile-menu-icon{
+            display: none;
+            }
+
+            .mobile-menu{
+            display: none;
+            }
+        }
+
+
+        /* Rest of your styles */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="desk-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-info.html">Personal Info</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+        
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">&#9776;</div>
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-info.html">Personal Info</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Portfolio</h1>
+            
+
+            <h2>Work Experience</h2>
+            <p>
+                Webify Solutions, Remote – Web Developer<br>
+                Dates of Employment: May 2023 - July 2023<br>
+                - Contributed to backend development<br>
+                - Managed website databases.<br>
+                - Created a B2C hospital site using PHP, MySQL, JavaScript, and Bootstrap in the development team.
+            </p>
+
+            <h2>Projects</h2>
+            <p>
+                Project 1: <a href="https://play.google.com/store/apps/details?id=com.internalscalci1.internalscalci">Internals-Calci</a><br>
+                - An Android app for calculating the internal marks of BEC college students.<br>
+                Project 2: <a href="http://sparkit2k23.great-site.net">Wesite-for-my-College</a><br>
+                - In a group, we created a heartfelt memory archive gift website..
+            </p>
+
+            <h2>Awards and Honors</h2>
+            <p>
+                - Got five starts in python in Hackerrank<br>
+                - Got Golden Badge in Internshala Web Development Training
+            </p>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    <script>
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.style.display === "block") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
